@@ -64,7 +64,7 @@ def edit_entry(request, entry_id):
 
     if request.method != 'POST':
         # Initial request; pre-fill form with the current entry.
-        form = EntryForm(instance=Entry)
+        form = EntryForm(instance=entry)
     else:
         # POST data submitted; process data.
         form = EntryForm(instance=entry, data=request.POST)
